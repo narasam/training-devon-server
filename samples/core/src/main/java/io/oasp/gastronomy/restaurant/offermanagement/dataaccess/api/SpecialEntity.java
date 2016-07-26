@@ -30,6 +30,8 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
 
   private OfferEntity offer;
 
+  private String comment;
+
   @Embedded
   private WeeklyPeriodEmbeddable activePeriod;
 
@@ -86,7 +88,7 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    *
    * @return offer {@link Offer} this special applies for.
    */
-  @ManyToOne // written by me t define relationship of offer
+  @ManyToOne
   public OfferEntity getOffer() {
 
     return this.offer;
@@ -169,6 +171,20 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
 
   @Override
   public void setActivePeriod(WeeklyPeriod activePeriod) {
+
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public String getComment() {
+
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  @Override
+  public void setComment(String comment) {
 
     // TODO Auto-generated method stub
 
